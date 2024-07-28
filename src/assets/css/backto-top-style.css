@@ -1,0 +1,45 @@
+.back-to-top {
+	position: fixed;
+	bottom: 0.75rem;
+	inset-inline-end: 0.75rem;
+	z-index: 50;
+	border-radius: 0.125rem;
+	font-size: 0.65rem;
+	line-height: 0.75rem;
+	--text-opacity: 1;
+	color: rgb(188 108 37 / var(--text-opacity));
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+	transition-duration: 500ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-to-top:hover {
+	--text-opacity: 1;
+	color: rgb(120 53 15 / var(--text-opacity));
+}
+
+.back-to-top:focus {
+	--text-opacity: 1;
+	color: rgb(120 53 15 / var(--text-opacity));
+}
+
+.back-to-top:active {
+	--text-opacity: 1;
+	color: rgb(120 53 15 / var(--text-opacity));
+}
+
+@media (min-width: 768px) {
+	.back-to-top {
+		bottom: 1.5rem;
+		inset-inline-end: 1.5rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.back-to-top {
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+}

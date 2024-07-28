@@ -5,6 +5,7 @@ const isLoggedIn = false;
 const heroImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fhero-img.png?alt=media&token=b5935b35-e191-4520-94cf-7ba58fdf720e";
 const heroBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fhero-bg-img.png?alt=media&token=97282545-ace7-4b1f-aaf9-caaac089418e";
 const storyBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fstory-bg-image.jpg?alt=media&token=33d87169-384d-4381-9125-877c6e140041";
+const yearCopyright = new Date().getFullYear();
 
 const path = String(window.location.pathname.replace("/", ""));
 let currentPage = "home";
@@ -107,4 +108,105 @@ const menuCategory = [
 	},
 ];
 
-export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, hamburgerClick, currentPage, heroImageUrl, heroBgImageUrl, menuCategory, storyBgImageUrl };
+const footerLink1 = [
+	{
+		id: 1,
+		page: "home",
+		name: "Home",
+	},
+	{
+		id: 2,
+		page: "menu",
+		name: "Menu",
+	},
+	{
+		id: 3,
+		page: "services",
+		name: "Services",
+	},
+	{
+		id: 4,
+		page: "cart",
+		name: "Shopping Cart",
+	},
+];
+
+const footerLink2 = [
+	{
+		id: 1,
+		page: "about",
+		name: "About us",
+	},
+	{
+		id: 2,
+		page: "contact",
+		name: "Contact us",
+	},
+	{
+		id: 3,
+		page: "termandcondition",
+		name: "Term & Condition",
+	},
+	{
+		id: 4,
+		page: "privacy",
+		name: "Privacy Policy",
+	},
+];
+
+const openHours = [
+	{
+		id: 1,
+		days: "Monday - Friday",
+		time: "09:00 - 21:00",
+	},
+	{
+		id: 2,
+		days: "Saturday - Sunday",
+		time: "09:00 - 22:00",
+	},
+];
+
+const socialMedia = [
+	{
+		id: 1,
+		link: "#!",
+		icon: "fa-brands fa-facebook-f fa-stack-1x fa-inverse medsos-color",
+	},
+	{
+		id: 2,
+		link: "#!",
+		icon: "fa-brands fa-instagram fa-stack-1x fa-inverse medsos-color",
+	},
+	{
+		id: 3,
+		link: "#!",
+		icon: "fa-brands fa-tiktok fa-stack-1x fa-inverse medsos-color",
+	},
+	{
+		id: 4,
+		link: "#!",
+		icon: "fa-brands fa-twitter fa-stack-1x fa-inverse medsos-color",
+	},
+	{
+		id: 5,
+		link: "#!",
+		icon: "fa-brands fa-youtube fa-stack-1x fa-inverse medsos-color",
+	},
+];
+
+const scrollFunction = () => {
+	const btnToTop = document.getElementById("btnToTop");
+	if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+		btnToTop.classList.remove("hidden");
+	} else {
+		btnToTop.classList.add("hidden");
+	}
+};
+const backToTop = () => {
+	window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+window.addEventListener("scroll", scrollFunction);
+
+export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, hamburgerClick, currentPage, heroImageUrl, heroBgImageUrl, menuCategory, storyBgImageUrl, footerLink1, footerLink2, openHours, socialMedia, backToTop, yearCopyright };

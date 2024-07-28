@@ -3,7 +3,9 @@ import HeroSection from "../components/HeroSection";
 import CategorySection from "../components/CategorySection";
 import StorySection from "../components/StorySection";
 import ProductSection from "../components/ProductSection";
-import { logoImageUrl, logoName1, logoName2, navMenu, hamburgerClick, currentPage, isLoggedIn, navIcon, heroImageUrl, heroBgImageUrl, menuCategory, storyBgImageUrl } from "../helpers/const";
+import BackToTop from "../components/BackToTop";
+import Footer from "../components/Footer";
+import { logoImageUrl, logoName1, logoName2, navMenu, hamburgerClick, currentPage, isLoggedIn, navIcon, heroImageUrl, heroBgImageUrl, menuCategory, storyBgImageUrl, footerLink1, footerLink2, openHours, socialMedia, backToTop, yearCopyright } from "../helpers/const";
 import { coffeeList, snackList } from "../helpers/productList";
 
 const Home = () => {
@@ -14,6 +16,8 @@ const Home = () => {
 			<CategorySection menuCategory={menuCategory} />
 			<StorySection logoName1={logoName1} logoName2={logoName2} storyBgImage={storyBgImageUrl} />
 			<ProductSection coffeeList={coffeeList} snackList={snackList} />
+			<BackToTop backToTop={backToTop} />
+			<Footer logoImage={logoImageUrl} logoName1={logoName1} logoName2={logoName2} footerLink1={footerLink1} footerLink2={footerLink2} openHours={openHours} socialMedia={socialMedia} yearCopyright={yearCopyright} />
 		</div>
 	);
 };
