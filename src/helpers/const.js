@@ -4,6 +4,7 @@ const logoName2 = "Shop";
 const isLoggedIn = false;
 const heroImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fhero-img.png?alt=media&token=b5935b35-e191-4520-94cf-7ba58fdf720e";
 const heroBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fhero-bg-img.png?alt=media&token=97282545-ace7-4b1f-aaf9-caaac089418e";
+const storyBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fstory-bg-image.jpg?alt=media&token=33d87169-384d-4381-9125-877c6e140041";
 
 const path = String(window.location.pathname.replace("/", ""));
 let currentPage = "home";
@@ -106,4 +107,4 @@ const menuCategory = [
 	},
 ];
 
-export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, hamburgerClick, currentPage, heroImageUrl, heroBgImageUrl, menuCategory };
+export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, hamburgerClick, currentPage, heroImageUrl, heroBgImageUrl, menuCategory, storyBgImageUrl };
