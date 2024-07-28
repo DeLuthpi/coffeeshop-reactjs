@@ -9,7 +9,7 @@ const Navbar = (props) => {
                     <span className="layout-logo">
                         <a href="/">
                             <img className="logo-image" src={props?.logo} alt="logo-image" />
-                            <span className="logo-name-1">{props?.logoName1}</span><span className="logo-name-2"> {props?.logoName2}</span>
+                            <span className="logo-name-1"> {props?.logoName1}</span><span className="logo-name-2"> {props?.logoName2}</span>
                         </a>
                     </span>
                     <div className="layout-btn-mobile">
