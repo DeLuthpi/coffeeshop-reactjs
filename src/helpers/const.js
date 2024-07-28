@@ -2,6 +2,8 @@ const logoImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918
 const logoName1 = "D'Coffee";
 const logoName2 = "Shop";
 const isLoggedIn = false;
+const heroImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fhero-img.png?alt=media&token=b5935b35-e191-4520-94cf-7ba58fdf720e";
+const heroBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fhero-bg-img.png?alt=media&token=97282545-ace7-4b1f-aaf9-caaac089418e";
 
 const path = String(window.location.pathname.replace("/", ""));
 let currentPage = "home";
@@ -57,7 +59,7 @@ const navIcon = [
 	},
 ];
 
-const handleClick = () => {
+const hamburgerClick = () => {
 	const list = document.querySelector("ul");
 	const icon = document.getElementById("icon-hamburger");
 	if (icon.classList.contains("fa-bars")) {
@@ -71,4 +73,37 @@ const handleClick = () => {
 	}
 };
 
-export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, handleClick, currentPage };
+const menuCategory = [
+	{
+		id: 1,
+		divClass: "category-menu-box menu-box-1",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fnew-arrivals.jpg?alt=media&token=392521dd-c1a4-4cd5-921a-3de1403fefd4",
+		altImg: "new-arrivals-img",
+		h3Class: "category-text-h1",
+		aName: "New Arrivals",
+		aHref: "menu",
+		pClass: "category-text-p1",
+	},
+	{
+		id: 2,
+		divClass: "category-menu-box",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fcoffee-category.jpg?alt=media&token=e8b823f8-b625-43c9-b7de-d86067650f41",
+		altImg: "coffee-cat-img",
+		h3Class: "category-text-h2",
+		aName: "Coffee",
+		aHref: "menu",
+		pClass: "category-text-p2",
+	},
+	{
+		id: 3,
+		divClass: "category-menu-box",
+		imageUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fsnack-category.jpg?alt=media&token=bb7a7aa0-6e56-49aa-a457-8e6705a299c7",
+		altImg: "snack-cat-img",
+		h3Class: "category-text-h2",
+		aName: "Snacks",
+		aHref: "menu",
+		pClass: "category-text-p2",
+	},
+];
+
+export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, hamburgerClick, currentPage, heroImageUrl, heroBgImageUrl, menuCategory };

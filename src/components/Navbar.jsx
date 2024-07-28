@@ -27,7 +27,7 @@ const Navbar = (props) => {
                             }
                         </div>
                         <span className="layout-btn-hamburger">
-                            <button id="btn-hamburger" className="btn-hamburger" onClick={props?.handleClick}><i className="fa-solid fa-bars" id="icon-hamburger"></i></button>
+                            <button id="btn-hamburger" className="btn-hamburger" onClick={props?.hamburgerClick}><i className="fa-solid fa-bars" id="icon-hamburger"></i></button>
                         </span>
                     </div>
                 </div>
