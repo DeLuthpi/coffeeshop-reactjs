@@ -1,0 +1,133 @@
+const coffeeList = [
+	{
+		id: 1,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-1.jpg?alt=media&token=1a7bc995-faae-44bd-9ffa-fc5eebb6d2bc",
+		coffeeName: "Cappuccino with Cinnamon",
+		coffeePrice: "Rp. 24.650,-",
+		coffeeRate: 4.9,
+	},
+	{
+		id: 2,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-2.jpg?alt=media&token=09e9da7c-5c14-43e6-80cb-92f89150846f",
+		coffeeName: "Salted Caramel Affogato",
+		coffeePrice: "Rp. 21.350,-",
+		coffeeRate: 4.5,
+	},
+	{
+		id: 3,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-3.jpg?alt=media&token=33bb5a57-69ec-4ce6-a0ab-ad5196680c92",
+		coffeeName: "Vanilla Late with Ice Cream",
+		coffeePrice: "Rp. 21.150,-",
+		coffeeRate: 4.9,
+	},
+	{
+		id: 4,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-4.jpg?alt=media&token=9f493227-3f47-4d53-9cff-2a826c6b8c54",
+		coffeeName: "Caramel Macchiato",
+		coffeePrice: "Rp. 23.450,-",
+		coffeeRate: 4.8,
+	},
+	{
+		id: 5,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-5.jpg?alt=media&token=0074d59a-1b1a-4fb2-967e-3d924b831263",
+		coffeeName: "Iced Creamy Mocca",
+		coffeePrice: "Rp. 22.250,-",
+		coffeeRate: 4.8,
+	},
+	{
+		id: 6,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-6.jpg?alt=media&token=cafa49f6-573b-4e12-acb8-0a7b63389d40",
+		coffeeName: "Cold Brew Coffee",
+		coffeePrice: "Rp. 22.550,-",
+		coffeeRate: 4.9,
+	},
+	{
+		id: 7,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-7.jpg?alt=media&token=37c3de2c-3c9a-4afb-a565-1ef6722e1f06",
+		coffeeName: "Americano",
+		coffeePrice: "Rp. 18.500,-",
+		coffeeRate: 4.6,
+	},
+	{
+		id: 8,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-8.jpg?alt=media&token=7a690c25-907e-4675-833e-f45c00278e8e",
+		coffeeName: "Chocolate Coffee",
+		coffeePrice: "Rp. 24.250,-",
+		coffeeRate: 4.7,
+	},
+	{
+		id: 9,
+		coffeeImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fcoffee-9.jpg?alt=media&token=64acf31d-ea1d-4045-8ecb-6adf8b57cd9a",
+		coffeeName: "Espresso Coffee",
+		coffeePrice: "Rp. 23.350,-",
+		coffeeRate: 4.8,
+	},
+];
+
+const snackList = [
+	{
+		id: 1,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-1.jpg?alt=media&token=191698a7-1ebe-4652-b496-a6056c95ca06",
+		snackName: "Mini Croissant",
+		snackPrice: "Rp. 10.500,-",
+		snackRate: 4.9,
+	},
+	{
+		id: 2,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-2.jpg?alt=media&token=73a5b21a-2855-45e3-928b-d0bd31cf6d0f",
+		snackName: "Maryam Bread",
+		snackPrice: "Rp. 12.500,-",
+		snackRate: 4.8,
+	},
+	{
+		id: 3,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-3.jpg?alt=media&token=bf02a59a-780e-4964-bc84-000c0f526be6",
+		snackName: "Coffee Buns",
+		snackPrice: "Rp. 11.250,-",
+		snackRate: 4.8,
+	},
+	{
+		id: 4,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-4.jpg?alt=media&token=efdf920d-a84a-4efb-a963-739be6e65f18",
+		snackName: "Butterred Toast",
+		snackPrice: "Rp. 9.500,-",
+		snackRate: 4.6,
+	},
+	{
+		id: 5,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-5.jpg?alt=media&token=ca44a6dc-6114-44d6-862e-e2c8e8c6945b",
+		snackName: "Egg and Cheese Toast",
+		snackPrice: "Rp. 15.650,-",
+		snackRate: 4.9,
+	},
+	{
+		id: 6,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-6.jpg?alt=media&token=0f1e775c-206e-40d0-89d9-747c2b293f3a",
+		snackName: "Korean Egg Toast",
+		snackPrice: "Rp. 22.750,-",
+		snackRate: 4.9,
+	},
+	{
+		id: 7,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-7.jpg?alt=media&token=3f53ae61-6037-4161-81d5-0739a45b948b",
+		snackName: "Egg Sandwich with mayo",
+		snackPrice: "Rp. 13.540,-",
+		snackRate: 4.9,
+	},
+	{
+		id: 8,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-8.jpg?alt=media&token=37e9b7e2-7edb-4967-9b07-50f100f13e32",
+		snackName: "Cinnamon Sugar Donuts",
+		snackPrice: "Rp. 15.250,-",
+		snackRate: 4.8,
+	},
+	{
+		id: 9,
+		snackImgUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/products%2Fsnack-9.jpg?alt=media&token=1c42839a-8290-4615-a9cf-e079a135ad05",
+		snackName: "Sweet Bread Chocolate",
+		snackPrice: "Rp. 15.750,-",
+		snackRate: 4.8,
+	},
+];
+
+export { coffeeList, snackList };
