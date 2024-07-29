@@ -496,6 +496,12 @@ video {
 	opacity: 1;
 }
 
+.main-content {
+	height: 100vh;
+	--bg-opacity: 1;
+	background-color: rgb(255 255 255 / var(--bg-opacity));
+}
+
 .hover\:text-chocolate:hover {
 	--text-opacity: 1;
 	color: rgb(188 108 37 / var(--text-opacity));

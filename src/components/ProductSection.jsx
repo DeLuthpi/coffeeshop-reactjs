@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import "../assets/css/product-style.css";
+import { Link } from "react-router-dom";
 
 const ProductSection = (props) => {
 	return (
@@ -19,7 +20,7 @@ const ProductSection = (props) => {
 				<div className="container product-section-body">
 					<div className="product-body-heading">
 						<h2 className="product-body-text-h1">Our Coffee <i className="fa-solid fa-mug-hot text-chocolate"></i></h2>
-						<a href="/coffee-category" className="btn-browse-top">Browse all coffee <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+						<Link to="/coffee-category" className="btn-browse-top">Browse all coffee <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></Link>
 					</div>
 					<div className="product-layout">
 						{props?.coffeeList.slice(0, 6).map(product => (
@@ -39,21 +40,24 @@ const ProductSection = (props) => {
 										<span className="text-gray-400">({product.coffeeRate})</span>
 									</div>
 									<div className="btn-add-cart">
-										<a href="#!" className="text-btn-add-cart"><i className="fa-solid fa-plus"></i> add to cart</a>
+										{props?.isLoggedIn ?
+											<Link className="text-btn-add-cart" onClick={() => props.addToCart(product)}><i className="fa-solid fa-plus"></i> add to cart</Link>
+											: <Link className="text-btn-add-cart" to="/login"><i className="fa-solid fa-plus"></i> add to cart</Link>
+										}
 									</div>
 								</div>
 							</div>
 						))}
 					</div>
 					<div className="layout-browse-bottom">
-						<a href="/coffee-category" className="btn-browse-bottom">Browse all coffee <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+					<Link to="/coffee-category" className="btn-browse-bottom">Browse all coffee <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></Link>
 					</div>
 				</div>
 
 				<div className="container product-section-body">
 					<div className="product-body-heading">
 						<h2 className="product-body-text-h1">Our Snacks <i className="rotate-90 fa-solid fa-pizza-slice text-chocolate"></i></h2>
-						<a href="/snacks-category" className="btn-browse-top">Browse all snacks <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+						<Link to="/snacks-category" className="btn-browse-top">Browse all snacks <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></Link>
 					</div>
 					<div className="product-layout">
 						{props?.snackList.slice(0, 6).map(product => (
@@ -73,14 +77,17 @@ const ProductSection = (props) => {
 										<span className="text-gray-400">({product.snackRate})</span>
 									</div>
 									<div className="btn-add-cart">
-										<a href="#!" className="text-btn-add-cart"><i className="fa-solid fa-plus"></i> add to cart</a>
+										{props?.isLoggedIn ?
+											<Link className="text-btn-add-cart" onClick={() => props.addToCart(product)}><i className="fa-solid fa-plus"></i> add to cart</Link>
+											: <Link className="text-btn-add-cart" to="/login"><i className="fa-solid fa-plus"></i> add to cart</Link>
+										}
 									</div>
 								</div>
 							</div>
 						))}
 					</div>
 					<div className="layout-browse-bottom">
-						<a href="/snacks-category" className="btn-browse-bottom">Browse all snacks <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+						<Link to="/snacks-category" className="btn-browse-bottom">Browse all snacks <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></Link>
 					</div>
 				</div>
 			</div>

@@ -7,11 +7,11 @@ const heroBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-9
 const storyBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fstory-bg-image.jpg?alt=media&token=33d87169-384d-4381-9125-877c6e140041";
 const yearCopyright = new Date().getFullYear();
 
-const path = String(window.location.pathname.replace("/", ""));
-let currentPage = "home";
+const path = String(window.location.pathname);
+let currentPage = "/home";
 
-if (path === "") {
-	currentPage = "home";
+if (path === "/") {
+	currentPage = "/home";
 } else {
 	currentPage = path;
 }
@@ -19,27 +19,27 @@ if (path === "") {
 const navMenu = [
 	{
 		id: 1,
-		page: "home",
+		page: "/home",
 		name: "Home",
 	},
 	{
 		id: 2,
-		page: "menu",
+		page: "/menu",
 		name: "Menu",
 	},
 	{
 		id: 3,
-		page: "services",
+		page: "/services",
 		name: "Services",
 	},
 	{
 		id: 4,
-		page: "about",
+		page: "/about",
 		name: "About us",
 	},
 	{
 		id: 5,
-		page: "contact",
+		page: "/contact",
 		name: "Contact us",
 	},
 ];
@@ -50,14 +50,14 @@ const navIcon = [
 		icon: "icon-cart",
 		tagSpan: true,
 		iconName: "fa-solid fa-basket-shopping",
-		linkHref: "cart",
+		page: "/cart",
 	},
 	{
 		id: 2,
 		icon: "icon-user",
 		tagSpan: false,
 		iconName: "fa-regular fa-user",
-		linkHref: "profile",
+		page: "/profile",
 	},
 ];
 
@@ -82,8 +82,8 @@ const menuCategory = [
 		imageUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fnew-arrivals.jpg?alt=media&token=392521dd-c1a4-4cd5-921a-3de1403fefd4",
 		altImg: "new-arrivals-img",
 		h3Class: "category-text-h1",
-		aName: "New Arrivals",
-		aHref: "menu",
+		linkTag: "New Arrivals",
+		linkTo: "/menu",
 		pClass: "category-text-p1",
 	},
 	{
@@ -92,8 +92,8 @@ const menuCategory = [
 		imageUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fcoffee-category.jpg?alt=media&token=e8b823f8-b625-43c9-b7de-d86067650f41",
 		altImg: "coffee-cat-img",
 		h3Class: "category-text-h2",
-		aName: "Coffee",
-		aHref: "menu",
+		linkTag: "Coffee",
+		linkTo: "/menu",
 		pClass: "category-text-p2",
 	},
 	{
@@ -102,8 +102,8 @@ const menuCategory = [
 		imageUrl: "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fsnack-category.jpg?alt=media&token=bb7a7aa0-6e56-49aa-a457-8e6705a299c7",
 		altImg: "snack-cat-img",
 		h3Class: "category-text-h2",
-		aName: "Snacks",
-		aHref: "menu",
+		linkTag: "Snacks",
+		linkTo: "/menu",
 		pClass: "category-text-p2",
 	},
 ];
@@ -111,22 +111,22 @@ const menuCategory = [
 const footerLink1 = [
 	{
 		id: 1,
-		page: "home",
+		page: "/home",
 		name: "Home",
 	},
 	{
 		id: 2,
-		page: "menu",
+		page: "/menu",
 		name: "Menu",
 	},
 	{
 		id: 3,
-		page: "services",
+		page: "/services",
 		name: "Services",
 	},
 	{
 		id: 4,
-		page: "cart",
+		page: "/cart",
 		name: "Shopping Cart",
 	},
 ];
@@ -134,22 +134,22 @@ const footerLink1 = [
 const footerLink2 = [
 	{
 		id: 1,
-		page: "about",
+		page: "/about",
 		name: "About us",
 	},
 	{
 		id: 2,
-		page: "contact",
+		page: "/contact",
 		name: "Contact us",
 	},
 	{
 		id: 3,
-		page: "termandcondition",
-		name: "Term & Condition",
+		page: "/termsandcondition",
+		name: "Terms & Condition",
 	},
 	{
 		id: 4,
-		page: "privacy",
+		page: "/privacy",
 		name: "Privacy Policy",
 	},
 ];
@@ -170,27 +170,27 @@ const openHours = [
 const socialMedia = [
 	{
 		id: 1,
-		link: "#!",
+		link: "https://facebook.com/d'coffeeshop",
 		icon: "fa-brands fa-facebook-f fa-stack-1x fa-inverse medsos-color",
 	},
 	{
 		id: 2,
-		link: "#!",
+		link: "https://instagram.com/d'coffeeshop",
 		icon: "fa-brands fa-instagram fa-stack-1x fa-inverse medsos-color",
 	},
 	{
 		id: 3,
-		link: "#!",
+		link: "https://tiktok.com/d'coffeeshop",
 		icon: "fa-brands fa-tiktok fa-stack-1x fa-inverse medsos-color",
 	},
 	{
 		id: 4,
-		link: "#!",
+		link: "https://x.com/d'coffeeshop",
 		icon: "fa-brands fa-twitter fa-stack-1x fa-inverse medsos-color",
 	},
 	{
 		id: 5,
-		link: "#!",
+		link: "https://youtube.com/d'coffeeshop",
 		icon: "fa-brands fa-youtube fa-stack-1x fa-inverse medsos-color",
 	},
 ];

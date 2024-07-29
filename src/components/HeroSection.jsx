@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 import "../assets/css/hero-style.css";
+import { Link } from "react-router-dom";
 
 const HeroSection = (props) => {
 	return (
@@ -14,7 +15,7 @@ const HeroSection = (props) => {
 						<h1 className="banner-text-h1">Start your day with fresh coffee and snacks.</h1>
 						<p className="banner-text-p2">Coffee is a popular and beloved beverage enjoyed by people around the world. Need fresh coffee?</p>
 
-						<a href="/menu" className="banner-btn-order">Order Now</a>
+						<Link to="/menu" className="banner-btn-order">Order Now</Link>
 					</div>
 					<div className="banner-layout-img">
 						<img className="banner-img" src={props?.heroImage} alt="hero-img" />

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import "../assets/css/category-style.css";
+import { Link } from "react-router-dom";
 
 const CategorySection = (props) => {
 	return (
@@ -8,7 +9,7 @@ const CategorySection = (props) => {
 			<div className="container category-layout">
 				<div className="category-heading">
 					<h2 className="category-heading-text">Shop by Category</h2>
-					<a href="/menu" className="btn-browse-top">Browse all categories <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+					<Link to="/menu" className="btn-browse-top">Browse all categories <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></Link>
 				</div>
 				<div className="category-body">
 					{props?.menuCategory.map(item => (
@@ -18,7 +19,7 @@ const CategorySection = (props) => {
 							<div className="category-text">
 								<div>
 									<h3 className={item.h3Class}>
-										<a href={item.aHref}><span className="category-text-link"></span>{item.aName}</a>
+										<Link to={item.linkTo}><span className="category-text-link"></span>{item.linkTag}</Link>
 									</h3>
 									<p aria-hidden="true" className={item.pClass}>Shop now</p>
 								</div>
@@ -27,7 +28,7 @@ const CategorySection = (props) => {
 					))}
 				</div>
 				<div className="layout-browse-bottom">
-					<a href="/menu" className="btn-browse-bottom">Browse all categories <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></a>
+					<Link to="/menu" className="btn-browse-bottom">Browse all categories <i className="fa-solid fa-arrow-right-long" aria-hidden="true"></i></Link>
 				</div>
 			</div>
 		</section>

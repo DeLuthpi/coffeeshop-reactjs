@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import "../assets/css/footer-style.css";
+import { Link } from "react-router-dom";
 
 const Footer = (props) => {
 	return (
@@ -23,7 +24,7 @@ const Footer = (props) => {
 						<ul>
 							{props?.footerLink1.map(list => (
 								<li className="footer-page-link" key={list.id}>
-									<a href={list.page}>{list.name}</a>
+									<Link to={list.page}>{list.name}</Link>
 								</li>
 							))}
 						</ul>
@@ -34,7 +35,7 @@ const Footer = (props) => {
 						<ul>
 							{props?.footerLink2.map(list => (
 								<li className="footer-page-link" key={list.id}>
-									<a href={list.page}>{list.name}</a>
+									<Link to={list.page}>{list.name}</Link>
 								</li>
 							))}
 						</ul>
@@ -54,7 +55,7 @@ const Footer = (props) => {
 							<ul className="footer-medsos">
 								{props?.socialMedia.map(list => (
 									<li className="footer-medsos-list" key={list.id}>
-										<a href={list.link}>
+										<a href={list.link} target="_blank">
 											<span className="fa-stack fa-lg">
 												<i className="fa-solid fa-circle fa-stack-2x"></i>
 												<i className={list.icon}></i>
@@ -70,7 +71,7 @@ const Footer = (props) => {
 
 			<div className="footer-bottom">
 				<span>Copyright © {props?.yearCopyright}. All Rights Reserved. {props?.logoName1} {props?.logoName2} — Designed by</span>
-				<a className="footer-bottom-link" href="#!"> De Luthpi</a>
+				<a className="footer-bottom-link" href="https://github.com/DeLuthpi"> De Luthpi</a>
 			</div>
 		</footer>
 		

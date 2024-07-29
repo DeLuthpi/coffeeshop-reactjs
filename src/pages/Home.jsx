@@ -15,7 +15,7 @@ const Home = () => {
 			<HeroSection logoName1={logoName1} logoName2={logoName2} heroImage={heroImageUrl} heroBgImage={heroBgImageUrl} />
 			<CategorySection menuCategory={menuCategory} />
 			<StorySection logoName1={logoName1} logoName2={logoName2} storyBgImage={storyBgImageUrl} />
-			<ProductSection coffeeList={coffeeList} snackList={snackList} />
+			<ProductSection coffeeList={coffeeList} snackList={snackList} isLoggedIn={isLoggedIn} />
 			<BackToTop backToTop={backToTop} />
 			<Footer logoImage={logoImageUrl} logoName1={logoName1} logoName2={logoName2} footerLink1={footerLink1} footerLink2={footerLink2} openHours={openHours} socialMedia={socialMedia} yearCopyright={yearCopyright} />
 		</div>
