@@ -1,8 +1,20 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "../assets/css/navbar-style.css";
+import { useState } from "react";
 
 const Navbar = (props) => {
+	let path = String(window.location.pathname);
+	if (path === "/") {
+		path = "/home";
+	}
+
+	const [currentPage, setCurrentPage] = useState(path);
+
+	const handleActive = () => {
+		setCurrentPage(path);
+	}
+
 	return (
 		<header className="header">
 			<nav className="navbar">
@@ -36,7 +48,9 @@ const Navbar = (props) => {
 				<div className="navbar-menu">
 					<ul className="opacity-0 layout-menu">
 						{props?.menus.map(list => (
-							<li className={props?.currentPage === list.page ? 'menu-list active' : 'menu-list'} key={list.id}><Link to={list.page} className="menu-link"> {list.name}</Link></li>
+							<li className={currentPage === list.page ? 'menu-list active' : 'menu-list'} key={list.id}>
+								<Link to={list.page} className="menu-link" onClick={handleActive}> {list.name}</Link>
+							</li>
 						))}
 					</ul>
 					<div className="layout-icon">

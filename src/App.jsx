@@ -8,6 +8,9 @@ import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import Login from "./pages/Login";
+import { isLoggedIn } from "./helpers/const";
+import { Navigate } from "react-router-dom";
 
 const App = () => {
 	return (
@@ -21,6 +24,7 @@ const App = () => {
 			<Route path="/cart" element = {<Cart />} />
 			<Route path="/termsandcondition" element = {<Terms />} />
 			<Route path="/privacy" element = {<Privacy />} />
+			<Route path="/login" element = {isLoggedIn ? <Navigate to='/' /> : <Login />} />
 		</Routes>
 	)
 }

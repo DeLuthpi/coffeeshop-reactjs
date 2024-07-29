@@ -7,15 +7,6 @@ const heroBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-9
 const storyBgImageUrl = "https://firebasestorage.googleapis.com/v0/b/coffeeshop-918d2.appspot.com/o/pages%2Fstory-bg-image.jpg?alt=media&token=33d87169-384d-4381-9125-877c6e140041";
 const yearCopyright = new Date().getFullYear();
 
-const path = String(window.location.pathname);
-let currentPage = "/home";
-
-if (path === "/") {
-	currentPage = "/home";
-} else {
-	currentPage = path;
-}
-
 const navMenu = [
 	{
 		id: 1,
@@ -209,4 +200,4 @@ const backToTop = () => {
 
 window.addEventListener("scroll", scrollFunction);
 
-export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, hamburgerClick, currentPage, heroImageUrl, heroBgImageUrl, menuCategory, storyBgImageUrl, footerLink1, footerLink2, openHours, socialMedia, backToTop, yearCopyright };
+export { logoImageUrl, logoName1, logoName2, isLoggedIn, navMenu, navIcon, hamburgerClick, heroImageUrl, heroBgImageUrl, menuCategory, storyBgImageUrl, footerLink1, footerLink2, openHours, socialMedia, backToTop, yearCopyright };
